@@ -1,0 +1,86 @@
+@use "../pages/variables.scss" as vars;
+
+// Heading styles
+%heading-base {
+  font-family: "Libre Bodoni", serif;
+  color: vars.$white;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.heading-1 {
+  @extend %heading-base;
+  font-size: 6.4rem;
+  line-height: 74px;
+}
+
+.heading-2 {
+  @extend %heading-base;
+  font-size: 4rem;
+  line-height: 50px;
+}
+
+.heading-3 {
+  @extend %heading-base;
+  font-size: 3rem;
+  line-height: 40px;
+}
+
+.heading-4 {
+  @extend %heading-base;
+  font-size: 2.4rem;
+  line-height: 34px;
+}
+
+// Text styles
+.text-body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.6rem;
+  line-height: 26px;
+  color: vars.$white-80;
+}
+
+.text-body-light {
+  @extend .text-body;
+  color: vars.$white;
+}
+
+.text-small {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.4rem;
+  line-height: 22px;
+  color: vars.$white-80;
+}
+
+.text-large {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.8rem;
+  line-height: 28px;
+  color: vars.$white-80;
+}
+
+// Text alignment
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// Text colors
+.text-orange {
+  color: vars.$dank-orange;
+}
+
+.text-white {
+  color: vars.$white;
+}
+
+.text-gray {
+  color: vars.$white-80;
+}

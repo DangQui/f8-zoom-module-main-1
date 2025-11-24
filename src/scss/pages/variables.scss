@@ -1,0 +1,67 @@
+@use "sass:map";
+
+// Color palette
+$white: #fff;
+$white-80: rgba(255, 255, 255, 0.8);
+$dank-orange: #fb8f2c;
+$dank: #111114;
+$gray-400: #828282;
+
+// Breakpoint system
+$breakpoints: (
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Legacy grid support
+$grid-breakpoints: $breakpoints;
+
+// Individual breakpoint variables for convenience
+$bp-xs: map.get($breakpoints, xs);
+$bp-sm: map.get($breakpoints, sm);
+$bp-md: map.get($breakpoints, md);
+$bp-lg: map.get($breakpoints, lg);
+$bp-xl: map.get($breakpoints, xl);
+$bp-xxl: map.get($breakpoints, xxl);
+
+// Responsive mixins
+@mixin respond-up($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+
+  @if ($value == null) {
+    @error 'The breakpoint "#{$breakpoint}" does not exist.';
+  }
+
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin respond-down($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+
+  @if ($value == null) {
+    @error 'The breakpoint "#{$breakpoint}" does not exist.';
+  }
+
+  @media (max-width: ($value - 0.02)) {
+    @content;
+  }
+}
+
+@mixin respond-between($from, $until) {
+  $from-value: map.get($breakpoints, $from);
+  $until-value: map.get($breakpoints, $until);
+
+  @if ($from-value == null or $until-value == null) {
+    @error 'One of the breakpoints ("#{$from}", "#{$until}") does not exist.';
+  }
+
+  @media (min-width: $from-value) and (max-width: ($until-value - 0.02)) {
+    @content;
+  }
+}

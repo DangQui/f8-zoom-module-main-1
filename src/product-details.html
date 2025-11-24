@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <% pageTitle = 'Product Details - WowWraps' %> <%-
+    include("./partials/head.ejs") %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <% currentPage = 'menu' %> <%- include("./partials/header.ejs") %>
+      <main>
+        <div class="product-detail">
+          <div class="container">
+            <div class="product-detail__main">
+              <div class="product-detail__image">
+                <img src="../public/images/product-detail.png" alt="" />
+              </div>
+              <div class="product-detail__info">
+                <h1 class="product-detail__title">Crispy Chicken Breasts</h1>
+                <div class="product-detail__rating">
+                  <div class="stars">
+                    <i class="col-orange fa-solid fa-star"></i>
+                    <i class="col-orange fa-solid fa-star"></i>
+                    <i class="col-orange fa-solid fa-star"></i>
+                    <i class="col-orange fa-solid fa-star"></i>
+                    <i class="col-orange fa-solid fa-star"></i>
+                  </div>
+                  <span class="product-detail__review-count">
+                    (1 customer review)
+                  </span>
+                </div>
+                <div class="product-detail__price">$54.00</div>
+                <div class="product-detail__description">
+                  Aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+                  nostrum exercitationem ullam corporis suscipit laboriosam,
+                  nisi ut aliquid ex ea commodi consequatur uis autem vel eum
+                  iure reprehenderit.
+                </div>
+                <div class="product-detail__add-to-cart">
+                  <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <input
+                      type="text"
+                      value="1"
+                      class="quantity-input"
+                      readonly />
+                    <button class="quantity-btn plus">+</button>
+                  </div>
+                  <button class="btn-add-to-cart btn-primary">
+                    Add to cart
+                  </button>
+                </div>
+                <div class="product-detail__meta">
+                  <div><strong>SKU:</strong> PT322</div>
+                  <div><strong>Category:</strong> Lunch</div>
+                  <div><strong>Tags:</strong> Sweets, Ghevar</div>
+                </div>
+              </div>
+            </div>
+            <!-- Tab Description / Reviews -->
+            <div class="product-detail__tabs">
+              <div class="tabs-header">
+                <button class="tab-link active" data-tab="description">
+                  Description
+                </button>
+                <a
+                  href="./product-detail-review.html"
+                  class="tab-link"
+                  data-tab="reviews"
+                  >Reviews (1)</a
+                >
+              </div>
+
+              <div id="description" class="tab-content active">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                  natoque penatibus et magnis dis parturient montes, nascetur
+                  ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                  eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                  pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                  In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                  justo. Nullam dictum felis eu pede mollis pretium. Integer
+                  tincidunt.
+                </p>
+                <p>
+                  Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
+                  eleifend tellus. Aenean leo ligula, porttitor eu, consequat
+                  vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+                  viverra quis, feugiat a, tellus.
+                </p>
+              </div>
+
+              <div id="reviews" class="tab-content">
+                <!-- Nội dung review ở đây -->
+              </div>
+            </div>
+
+            <div class="related-products">
+              <h2>Related Items</h2>
+              <div class="food-grid">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <div class="food-item">
+                        <div class="food-images">
+                          <img
+                            class="food-image"
+                            src="../public/images/product-detail-1.png"
+                            alt="" />
+                        </div>
+                        <div class="price-name">
+                          <h3 class="item-name">Shezwan Noodles</h3>
+                          <h3 class="item-price">$49</h3>
+                        </div>
+                        <p class="item-details">
+                          Fresh toasted sourdough bread with olive oil and
+                          pomegranate.
+                        </p>
+                        <div class="item-actions">
+                          <a
+                            class="order-btn link-underline-white"
+                            href="./product-details.html"
+                            >Order now</a
+                          >
+                          <div class="star-rating">
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="food-item">
+                        <div class="food-images">
+                          <img
+                            class="food-image"
+                            src="../public/images/product-detail-2.png"
+                            alt="" />
+                        </div>
+                        <div class="price-name">
+                          <h3 class="item-name">Shezwan Noodles</h3>
+                          <h3 class="item-price">$49</h3>
+                        </div>
+                        <p class="item-details">
+                          Fresh toasted sourdough bread with olive oil and
+                          pomegranate.
+                        </p>
+                        <div class="item-actions">
+                          <a
+                            class="order-btn link-underline-white"
+                            href="./product-details.html"
+                            >Order now</a
+                          >
+                          <div class="star-rating">
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-gray fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="food-item">
+                        <div class="food-images">
+                          <img
+                            class="food-image"
+                            src="../public/images/product-detail-1.png"
+                            alt="" />
+                        </div>
+                        <div class="price-name">
+                          <h3 class="item-name">Shezwan Noodles</h3>
+                          <h3 class="item-price">$49</h3>
+                        </div>
+                        <p class="item-details">
+                          Fresh toasted sourdough bread with olive oil and
+                          pomegranate.
+                        </p>
+                        <div class="item-actions">
+                          <a
+                            class="order-btn link-underline-white"
+                            href="./product-details.html"
+                            >Order now</a
+                          >
+                          <div class="star-rating">
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-gray fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <%- include("./partials/footer.ejs") %>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

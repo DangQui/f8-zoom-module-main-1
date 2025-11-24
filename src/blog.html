@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <% pageTitle = 'Blog - WowWraps' %> <%- include("./partials/head.ejs") %>
+  </head>
+  <body>
+    <% currentPage = 'blog' %> <%- include("./partials/header.ejs") %>
+    <main>
+      <div class="wrapper">
+        <div class="blog-hero">
+          <div class="container">
+            <h1 class="blog-hero__title">
+              Restaurant Management & Growth Blog
+            </h1>
+          </div>
+        </div>
+        <div class="container">
+          <div class="featured-post">
+            <div class="featured-post__image">
+              <img src="../public/images/blog-1.png" alt="" />
+            </div>
+            <div class="featured-post__content">
+              <h2 class="featured-post__title">
+                Everything you need to know about the growing role of AI in
+                restaurants
+              </h2>
+              <p class="featured-post__excerpt">
+                You are sitting in your favorite restaurant and have ordered on
+                a tablet on your table. A few seconds after placing the order, a
+                notification will appear in your messaging app.
+              </p>
+              <a class="featured-post__readmore link-underline-orange"
+                >Read more</a
+              >
+            </div>
+          </div>
+          <div class="blog-grid">
+            <div class="blog-card">
+              <img
+                src="../public/images/blog-2.png"
+                alt=""
+                class="blog-card__image" />
+              <div class="blog-card-information">
+                <h2 class="blog-card-title"></h2>
+                <div class="blog-card__meta"></div>
+              </div>
+              <div class="blog-card__readmore"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

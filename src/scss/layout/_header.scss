@@ -1,0 +1,119 @@
+$white: #fff;
+$white-80: rgba(255, 255, 255, 0.8);
+$dank-orange: #fb8f2c;
+$dank: #111114;
+
+.header {
+  .top-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    height: 55px;
+    padding: 50px 90px;
+    background: $dank;
+    color: $white-80;
+
+    .nav {
+      .submenu {
+        display: inline-flex;
+        gap: 34px;
+        line-height: 26px;
+
+        a {
+          transition: all 0.3s ease-in-out;
+        }
+
+        a.active {
+          color: $dank-orange !important;
+        }
+
+        a:hover {
+          color: $dank-orange;
+        }
+      }
+    }
+
+    .table-reservation {
+      display: inline-flex;
+      gap: 28px;
+      line-height: 26px;
+
+      a:hover {
+        color: $dank-orange;
+      }
+    }
+  }
+}
+
+.intro-header {
+  color: $white-80;
+  margin-top: 110px;
+
+  .text-intro {
+    display: block;
+    line-height: 26px;
+    max-width: 532px;
+  }
+
+  .text-intro:nth-child(1) {
+    margin-top: 54px;
+  }
+
+  h1 {
+    text-transform: capitalize;
+    font-size: 64px;
+    max-width: 670px;
+    margin: 10px 0 20px 0;
+    line-height: 74px;
+  }
+
+  .our-menu {
+    max-width: 10%;
+    margin-top: 40px;
+    color: $dank-orange;
+  }
+
+  .dish {
+    display: flex;
+    align-items: center;
+
+    .dish-big {
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      .price-big {
+        position: absolute;
+        top: 72%;
+        background: $dank-orange;
+        padding: 12px 16px 8px 16px;
+
+        span {
+          color: $white;
+          font-family: "Libre Bodoni", serif;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 34px;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    .dish-small {
+      .food-small + .food-small {
+        margin-top: 30px;
+      }
+
+      .food-small:nth-child(2) {
+        float: right;
+      }
+    }
+  }
+}

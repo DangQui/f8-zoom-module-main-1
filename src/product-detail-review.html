@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <% pageTitle = 'Product Review - WowWraps' %> <%-
+    include("./partials/head.ejs") %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <% currentPage = 'menu' %> <%- include("./partials/header.ejs") %>
+      <main>
+        <div class="product-detail">
+          <div class="container">
+            <div class="product-detail__main">
+              <div class="product-detail__image">
+                <img src="../public/images/product-detail.png" alt="" />
+              </div>
+              <div class="product-detail__info">
+                <h1 class="product-detail__title">Crispy Chicken Breasts</h1>
+                <div class="product-detail__rating">
+                  <div class="stars">
+                    <i class="col-orange fa-solid fa-star"></i>
+                    <i class="col-orange fa-solid fa-star"></i>
+                    <i class="col-orange fa-solid fa-star"></i>
+                    <i class="col-orange fa-solid fa-star"></i>
+                    <i class="col-orange fa-solid fa-star"></i>
+                  </div>
+                  <span class="product-detail__review-count">
+                    (1 customer review)
+                  </span>
+                </div>
+                <div class="product-detail__price">$54.00</div>
+                <div class="product-detail__description">
+                  Aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+                  nostrum exercitationem ullam corporis suscipit laboriosam,
+                  nisi ut aliquid ex ea commodi consequatur uis autem vel eum
+                  iure reprehenderit.
+                </div>
+                <div class="product-detail__add-to-cart">
+                  <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <input
+                      type="text"
+                      value="1"
+                      class="quantity-input"
+                      readonly />
+                    <button class="quantity-btn plus">+</button>
+                  </div>
+                  <button class="btn-add-to-cart btn-primary">
+                    Add to cart
+                  </button>
+                </div>
+                <div class="product-detail__meta">
+                  <div><strong>SKU:</strong> PT322</div>
+                  <div><strong>Category:</strong> Lunch</div>
+                  <div><strong>Tags:</strong> Sweets, Ghevar</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab Description / Reviews -->
+            <div class="product-detail__tabs">
+              <div class="tabs-header">
+                <a
+                  href="./product-details.html"
+                  class="tab-link"
+                  data-tab="description">
+                  Description
+                </a>
+                <a
+                  href="./product-detail-review.html"
+                  class="tab-link active"
+                  data-tab="reviews"
+                  >Reviews (1)</a
+                >
+              </div>
+
+              <div id="description" class="tab-content active">
+                <div class="reviews-section">
+                  <div class="review-item">
+                    <div class="review-header">
+                      <div class="review-author">
+                        <div class="author-avatar">
+                          <img
+                            src="../public/images/avatar.png"
+                            alt="Jamie Milson" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="review-content">
+                      <div class="author-info">
+                        <span class="author-name">Jamie Milson</span>
+                        <span>-</span>
+                        <span class="review-date"> March 18, 2022</span>
+                      </div>
+                      <p class="review-detail-content">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit. Aenean commodo ligula eget dolor. Aenean massa.
+                        Cum sociis natoque penatibus et magnis dis parturient
+                        montes, nascetur ridiculus mus.
+                      </p>
+                      <div class="review-rating">
+                        <i class="col-orange fa-solid fa-star"></i>
+                        <i class="col-orange fa-solid fa-star"></i>
+                        <i class="col-orange fa-solid fa-star"></i>
+                        <i class="col-orange fa-solid fa-star"></i>
+                        <i class="col-orange fa-solid fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add Review -->
+            <div class="add-review">
+              <h3 class="add-review-title">Add A Review</h3>
+              <p class="form-note">
+                Your email address will not be published. Required fields are
+                marked <sup>*</sup>
+              </p>
+
+              <form class="review-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">Your name <sup>*</sup></label>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Foysal Khan"
+                      required />
+                    <div class="form-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M11.9849 15.3457C8.11731 15.3457 4.81445 15.9305 4.81445 18.2724C4.81445 20.6143 8.09636 21.22 11.9849 21.22C15.8525 21.22 19.1545 20.6343 19.1545 18.2933C19.1545 15.9524 15.8735 15.3457 11.9849 15.3457Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M11.9849 12.0059C14.523 12.0059 16.5801 9.94779 16.5801 7.40969C16.5801 4.8716 14.523 2.81445 11.9849 2.81445C9.44679 2.81445 7.3887 4.8716 7.3887 7.40969C7.38013 9.93922 9.42394 11.9973 11.9525 12.0059H11.9849Z"
+                          stroke="white"
+                          stroke-width="1.42857"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email address <sup>*</sup></label>
+                    <input type="email" id="email" placeholder="" required />
+                    <div class="form-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none">
+                        <path
+                          d="M17.9024 8.85156L13.4591 12.4646C12.6196 13.1306 11.4384 13.1306 10.5989 12.4646L6.11816 8.85156"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.9089 21C19.9502 21.0084 22 18.5095 22 15.4384V8.57001C22 5.49883 19.9502 3 16.9089 3H7.09114C4.04979 3 2 5.49883 2 8.57001V15.4384C2 18.5095 4.04979 21.0084 7.09114 21H16.9089Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="website">Website <sup>*</sup></label>
+                    <input type="url" id="website" placeholder="" />
+                  </div>
+                </div>
+
+                <div class="form-rating">
+                  <label for="rating">Your rating <sup>*</sup></label>
+                  <div class="rating-input">
+                    <i class="col-orange fa-solid fa-star" data-rating="1"></i>
+                    <i
+                      class="col-orange fa-regular fa-star"
+                      data-rating="2"></i>
+                    <i
+                      class="col-orange fa-regular fa-star"
+                      data-rating="3"></i>
+                    <i
+                      class="col-orange fa-regular fa-star"
+                      data-rating="4"></i>
+                    <i
+                      class="col-orange fa-regular fa-star"
+                      data-rating="5"></i>
+                  </div>
+                </div>
+
+                <div class="form-comment">
+                  <label for="review">Write review <sup>*</sup></label>
+                  <textarea id="review" placeholder="" required></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                  <input type="checkbox" id="save-info" />
+                  <label for="save-info"
+                    >Save my name, email, and website in this browser for the
+                    next time I comment.</label
+                  >
+                </div>
+
+                <button type="submit" class="submit-btn btn-primary btn-md">
+                  Submit
+                </button>
+              </form>
+            </div>
+
+            <div class="related-products">
+              <h2>Related Items</h2>
+              <div class="food-grid">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <div class="food-item">
+                        <div class="food-images">
+                          <img
+                            class="food-image"
+                            src="../public/images/product-detail-1.png"
+                            alt="" />
+                        </div>
+                        <div class="price-name">
+                          <h3 class="item-name">Shezwan Noodles</h3>
+                          <h3 class="item-price">$49</h3>
+                        </div>
+                        <p class="item-details">
+                          Fresh toasted sourdough bread with olive oil and
+                          pomegranate.
+                        </p>
+                        <div class="item-actions">
+                          <a
+                            class="order-btn link-underline-white"
+                            href="./product-details.html"
+                            >Order now</a
+                          >
+                          <div class="star-rating">
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="food-item">
+                        <div class="food-images">
+                          <img
+                            class="food-image"
+                            src="../public/images/product-detail-2.png"
+                            alt="" />
+                        </div>
+                        <div class="price-name">
+                          <h3 class="item-name">Shezwan Noodles</h3>
+                          <h3 class="item-price">$49</h3>
+                        </div>
+                        <p class="item-details">
+                          Fresh toasted sourdough bread with olive oil and
+                          pomegranate.
+                        </p>
+                        <div class="item-actions">
+                          <a
+                            class="order-btn link-underline-white"
+                            href="./product-details.html"
+                            >Order now</a
+                          >
+                          <div class="star-rating">
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-gray fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="food-item">
+                        <div class="food-images">
+                          <img
+                            class="food-image"
+                            src="../public/images/product-detail-1.png"
+                            alt="" />
+                        </div>
+                        <div class="price-name">
+                          <h3 class="item-name">Shezwan Noodles</h3>
+                          <h3 class="item-price">$49</h3>
+                        </div>
+                        <p class="item-details">
+                          Fresh toasted sourdough bread with olive oil and
+                          pomegranate.
+                        </p>
+                        <div class="item-actions">
+                          <a
+                            class="order-btn link-underline-white"
+                            href="./product-details.html"
+                            >Order now</a
+                          >
+                          <div class="star-rating">
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-orange fa-solid fa-star"></i>
+                            <i class="col-gray fa-solid fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <%- include("./partials/footer.ejs") %>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

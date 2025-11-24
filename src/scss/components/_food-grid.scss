@@ -1,0 +1,81 @@
+@use "../pages/variables.scss" as vars;
+
+.food-grid {
+  margin-top: 60px;
+  margin-left: -15px;
+  cursor: pointer;
+
+  .food-item {
+    .food-images {
+      overflow: hidden;
+    }
+
+    .food-image {
+      height: 344px;
+      width: 100%;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .item-name {
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      .food-image {
+        transform: scale(1.2);
+      }
+
+      .item-name {
+        color: vars.$dank-orange;
+      }
+    }
+
+    .price-name {
+      display: flex;
+      justify-content: space-between;
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 34px;
+      text-transform: capitalize;
+      margin-top: 16px;
+    }
+
+    .item-details {
+      line-height: 26px;
+      color: vars.$white-80;
+      margin-top: 6px;
+    }
+
+    .item-actions {
+      display: flex;
+      justify-content: space-between;
+
+      .order-btn {
+        position: relative;
+        color: vars.$white;
+        line-height: 26px;
+        margin-top: 16px;
+        text-transform: capitalize;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: vars.$dank-orange;
+        }
+      }
+
+      .star-rating {
+        margin-top: 16px;
+        line-height: 26px;
+        font-size: 22px;
+
+        .col-orange {
+          color: vars.$dank-orange;
+        }
+
+        .col-gray {
+          color: #828282;
+        }
+      }
+    }
+  }
+}
