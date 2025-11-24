@@ -1,0 +1,88 @@
+@use "./variables.scss" as vars;
+
+main {
+  .coming-soon {
+    margin-top: 165px;
+    display: flex;
+    gap: 100px;
+    justify-content: end;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 576px;
+    }
+
+    &__title {
+      font-size: 64px;
+      line-height: 74px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    &__desc {
+      text-align: center;
+      color: vars.$white-80;
+      line-height: 26px;
+      padding: 0 20px;
+      margin-top: 16px;
+    }
+
+    &__countdown {
+      display: flex;
+      gap: 64px;
+      margin-top: 48px;
+    }
+
+    &__time-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: vars.$white-80;
+    }
+
+    &__time-number {
+      font-size: 58px;
+      line-height: 62px;
+      font-weight: 400;
+      text-transform: capitalize;
+      color: vars.$dank-orange;
+      font-family: "Playball";
+      -webkit-text-stroke-width: 1.15px;
+      -webkit-text-stroke-color: var(--Dark-Orange, #fb8f2c);
+    }
+
+    &__time-label {
+      line-height: 26px;
+    }
+
+    &__button {
+      margin-top: 40px;
+      color: vars.$white;
+      line-height: 26px;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        color: vars.$dank-orange;
+      }
+    }
+
+    &__image {
+      position: relative;
+    }
+
+    &__image-decor {
+      position: absolute;
+      z-index: -1;
+      right: -55px;
+      bottom: -52px;
+    }
+  }
+}

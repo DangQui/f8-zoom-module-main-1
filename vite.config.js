@@ -15,6 +15,7 @@ export default defineConfig({
         menu: path.resolve(__dirname, "src/menu.html"),
         blog: path.resolve(__dirname, "src/blog.html"),
         about: path.resolve(__dirname, "src/about.html"),
+        pages: path.resolve(__dirname, "src/pages.html"),
         productDetails: path.resolve(__dirname, "src/product-details.html"),
         productDetailReview: path.resolve(
           __dirname,

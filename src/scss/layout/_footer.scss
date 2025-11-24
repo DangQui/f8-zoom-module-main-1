@@ -9,7 +9,7 @@ $dank: #111114;
 
   .connect-section {
     display: flex;
-    gap: 100px;
+    gap: 94px;
 
     .connect-header {
       display: flex;
@@ -30,6 +30,8 @@ $dank: #111114;
     }
 
     .connect-link {
+      width: 210px;
+
       .link-title {
         font-family: " Plus Jakarta Sans ", sans-serif;
         font-size: 20px;
